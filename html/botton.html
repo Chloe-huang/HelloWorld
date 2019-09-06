@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" name="div1">
+
+<div id="div2" class="div2"></div>
+
+<input type="radio" id="man" name="sex" value="男" checked="checked">
+<label for="man">男</label>
+
+<input type="radio" id="woman" name="sex" value="女">
+<label for-="woman">女</label>
+
+<input type="button" value="点击按钮" id="btn">
+<div id="tab">
+    <ul>
+        <li>黄飞鸿</li>
+        <li>黄飞鸿</li>
+        <li>黄飞鸿</li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    var oDiv=document.getElementById('div2');
+    console.log(oDiv.tagName);
+    var oBtn=document.getElementById('btn');
+    var oSex=document.getElementsByName('sex');
+    oBtn.onclick=function(){
+        for(var i=0;i<oSex.length;i++){
+            var val=oSex[i].value;
+            if(oSex[i].checked===true){
+                console.log(val);
+                break;
+            }
+        }
+    }
+    document.querySelector(".div2");
+    document.querySelectorAll("#tab ul li");
+    document.querySelector("input[name='div2']");
+
+</script>
+</body>
+</html>
